@@ -50,7 +50,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 5000
+  - name: http
+    port: 5000
     targetPort: 5000
     nodePort: 30500
   selector:

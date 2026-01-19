@@ -1,0 +1,20 @@
+# observability/prometheus-values.yaml
+
+alertmanager:
+  enabled: true
+  alertmanagerSpec:
+    replicas: 1
+  service:
+    type: NodePort
+    nodePort: 30093
+
+grafana:
+  adminPassword: autoresolve
+  service:
+    type: NodePort
+    nodePort: 30080
+
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 30090
